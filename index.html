@@ -6,38 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <style>
-            @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
-            </style>
+        @import url('https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap');
+    </style>
     <title>Numbers</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-    <div class="body">
+    <div class="wrapper">
 
         <div class="header">
             <h1>numbergame</h1>
-            <p>Guess the number</p>
+            <p>can you guess the number between 1 and 100?</p>
 
         </div>
 
         <div class="main">
+            <div class="guess">
                 <label for="name">Guess the number</label>
 
-                <input type="text" id="name" name="name" required
-                       minlength="1" maxlength="10" size="10">
+                <input type="text" id="name" name="name" required minlength="1" maxlength="10" size="5" placeholder="...">
 
-                <button>submit</button>     
-                
-                <p id="previous">Number of previous attempts:</p>
-                <p id="attempt">6</p>
+                <button>TRY</button>
+            </div>
+            <div class="attempts">
+                <p id="previous">Previous attempts:</p>
+                <p id="fails"> 23 2 67 14 98</p>
+            </div>
+
+            <div class="succes">
                 <p id="correct">Correct Answer:</p>
                 <p id="answer">73</p>
+            </div>
+
 
         </div>
 
     </div>
- <script>src="java.js"</script>   
+    <script>
+        src = "java.js"
+    </script>
 
 </body>
 
