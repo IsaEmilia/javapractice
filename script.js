@@ -1,7 +1,8 @@
 const guessInput = document.querySelector(".guessInput");
 const input = document.getElementById("name");
-const attempt = document.querySelector(".attempts");
-const succes = document.querySelector(".succes");
+const attempt = document.getElementById("fails");
+const succes = document.getElementById("answer");
+const button = document.getElementById("button");
 
 let randomNum = Math.floor(Math.random() *101);
 console.log(randomNum);
@@ -9,17 +10,21 @@ console.log(randomNum);
 
  function guessNum(event){
      event.preventDefault()
-console.log(input.value)
-    console.log("hello")
+    
+    const guess = input.value 
+
+   
+    if(guess == randomNum) {
+        succes.innerHTML += ` ${guess} `;
+        button.disabled = true;
+    }else if(guess >= randomNum) {
+        attempt.innerHTML += ` ${guess} `;
+        button.innerHTML = "lower!"
+    }else if( guess <= randomNum) {
+        attempt.innerHTML += ` ${guess} `;
+        button.innerHTML = "higher!"
+    }
 }
 
-
-function correct(){
-
-}
-
-
-
-
-
+button.addEventListener("click", guessNum);
 guessInput.addEventListener("submit", guessNum);
