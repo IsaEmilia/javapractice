@@ -16,6 +16,7 @@ console.log(randomNum);
    
     if(guess == randomNum) {
         succes.innerHTML += ` ${guess} `;
+        button.innerHTML = "VICTORY!"
         button.disabled = true;
     }else if(guess >= randomNum) {
         attempt.innerHTML += ` ${guess} `;
@@ -25,6 +26,8 @@ console.log(randomNum);
         button.innerHTML = "higher!"
     }
 }
+
+
 
 button.addEventListener("click", guessNum);
 guessInput.addEventListener("submit", guessNum);
