@@ -23,11 +23,6 @@ div{
     display: grid;
 }
 
-p {
-    padding: 10px;
-}
-
-
 .header {
     padding: 10px;
     grid-row: 1 / 2;
@@ -121,4 +116,5 @@ p{
     font-variant: small-caps;
     letter-spacing: 5px;
     font-size: 20px;
+    padding: 10px;
 }

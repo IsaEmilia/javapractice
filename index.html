@@ -24,11 +24,13 @@
         <div class="main">
             <div class="guess">
                 <label for="name">Guess the number</label>
-
-                <input type="text" id="name" name="name" required minlength="1" maxlength="10" size="5" placeholder="...">
-
+                <form class="guessInput">
+                    <input type="text" id="name" name="name" required minlength="1" maxlength="10" size="5"
+                        placeholder="...">
+                </form>
                 <button>TRY</button>
             </div>
+
             <div class="attempts">
                 <p id="previous">Previous attempts:</p>
                 <p id="fails"> 23 2 67 14 98</p>
@@ -43,7 +45,7 @@
         </div>
 
     </div>
-    <script src = "script.js"> </script>
+    <script src="script.js"> </script>
     </script>
 
 </body>
